@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace CookNShareWebApi.Models
 {
@@ -14,5 +15,6 @@ namespace CookNShareWebApi.Models
         public string LastName { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime LastActive { get; set; }
+        public ICollection<Recipe> MyProperty { get; set; }
     }
 }
