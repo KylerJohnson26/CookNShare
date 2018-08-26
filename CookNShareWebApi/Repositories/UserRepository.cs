@@ -17,6 +17,11 @@ namespace CookNShareWebApi.Repositories
             return await _context.Users.FirstOrDefaultAsync(x => x.Username == username);
         }
 
+        public async Task<User> GetUserByUserId(int userId)
+        {
+            return await _context.Users.FirstOrDefaultAsync(x => x.Id == userId);
+        }
+
         public async Task<bool> CreateNewUser(User user)
         {
             await _context.Users.AddAsync(user);
